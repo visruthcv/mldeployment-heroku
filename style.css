@@ -1,0 +1,93 @@
+
+:root {
+	background: #f5f6fa;
+	color: #9c9c9c;
+	font: 1rem "PT Sans", sans-serif;
+}
+
+html,
+body,
+.container {
+	height: 100%;
+}
+
+a {
+	color: inherit;
+}
+
+a:hover {
+	color: #7f8ff4;
+}
+
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+
+.btn {
+	margin-left: 25%;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+}
+
+.btn-primary {
+	background: #4285f4;
+	color: #f2f2f2;
+	box-shadow: 0 0 10px 2px rgba(0, 0, 0, .1);
+	border-radius: 2px;
+	padding: 15px 40px;
+}
+
+.btn:hover {
+	background: #4172DF;
+}
+
+.btn:active {
+	background: #4266cd;
+	box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, .2);
+}
+
+
+
+.form__field {
+	width: 50%;
+	margin-left: 25%;
+	margin-bottom: 10px	;
+	background: #fff;
+	color: #111111;
+	font: inherit;
+	box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .1);
+	border: 0;
+	outline: 0;
+	padding: 22px 18px;
+}
+
+.result {
+	text-align: center;
+	color: #111111;
+	font-size: 20px;
+}
+
+.description {
+	font-size: 14px;
+	width: 51%;
+	text-align: justify;
+	margin-left: 25%;
+}
+
+h3 {
+	margin-block-start: 0;
+	margin-block-end: 2px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Предсказание сегмента</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__item">
+            <form class="form" action="{{ url_for('predict')}}" method="post">
+                <input class="form__field" type="text" name="age" placeholder="Возраст, лет" required="required" />
+                <input class="form__field" type="text" name="driving_experience" placeholder="Стаж вождения, лет" required="required" />
+                <input class="form__field" type="text" name="unprofitableness" placeholder="Убыточность, %" required="required" />
+                <input class="form__field" type="text" name="salary" placeholder="Уровень заработной платы, руб/год" required="required" />
+                <button type="submit" class="btn btn-primary btn-block btn-large">Узнать сегмент</button>
+            </form>
+            <br>
+            <br>
+            <div class="result">
+                {{ prediction_text }}
+                <div class="description">
+                    <p>
+                        <h3>Сегмент 1: </h3>
+                        В данном сегменте собраны клиенты самого молодого возраста (от 20 до 28 лет), средний возраст — 24 года. Также это клиенты с самым низким уровнем З/П (от 600 000₽ до 800 000₽). Убыточность ниже, чем у сегмента №2, но выше, чем у сегментов №3 и №4.
+                    </p>
+                    <p>
+                        <h3>Сегмент 2: </h3>
+                        В данном сегменте клиенты в возрасте от 22 до 38 лет, средний возраст — 30 лет. Так же, здесь собраны клиенты с наибольшей убыточностью (от 306% до 700%). Уровень З/П ниже, чем у сегментов №3 и №4.
+                    </p>
+                    <p>
+                        <h3>Сегмент 3: </h3>
+                        В данном сегменте клиенты с самым высоким возрастом (от 59 до 79 лет) и стажем вождения (от 33 до 58 лет). Убыточность выше и уровень З/П ниже, чем у сегмента №4.
+                    </p>
+
+                    <p>
+                    <h3>Сегмент 4: </h3>
+                    Это сегмент с наиболее низкой убыточностью клиентов и более высоким уровнем З/П, в сравнении с другими сегментами. Клиенты со стажем вождения от 20 лет и минимальным возрастом 41 год.                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
